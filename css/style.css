@@ -39,6 +39,12 @@
 
 .navbanner {
 	text-align: center;
+	background-color: rgb(0, 34, 62);
+	padding-top: 10px;
+}
+
+.navbanner h6 {
+	margin-bottom: 0;
 }
 
 .navbanner img {
@@ -48,8 +54,11 @@
 
 /*========DISCOVER HOME PAGE==========*/
 
-#discover {
+
+#discoverinfo {
 	background-color: rgb(0, 34, 62);
+	padding: 20px;
+	margin-bottom: 3px;
 }
 
 #seclist img {
@@ -58,6 +67,8 @@
 
 .secblue {
 	background-color: rgb(40, 123, 210);
+	padding: 10px;
+	line-height: 2em;
 }
 
 .secgreen {
