@@ -9,6 +9,10 @@
 	background-color: rgb(232, 73, 91);
 }
 
+#hmdiscover img {
+	width: 70px;
+}
+
 #hmmaps {
 	background-color: rgb(232, 145, 66);
 }
