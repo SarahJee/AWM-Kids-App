@@ -1,5 +1,9 @@
 
 /*========HOME PAGE==========*/
+#hmsoldier img {
+	width: 300px;
+}
+
 .homelink {
 	border-bottom: 3px solid #ffffff;
 	height: 130px;
@@ -7,6 +11,7 @@
 
 #hmdiscover {
 	background-color: rgb(232, 73, 91);
+	text-align: center;
 }
 
 #hmdiscover img {
@@ -15,10 +20,29 @@
 
 #hmmaps {
 	background-color: rgb(232, 145, 66);
+	text-align: center;
+}
+
+#hmmaps img {
+	width: 70px;
 }
 
 #hmawm {
 	background-color: rgb(0, 70, 128);
+}
+
+#hmawm img {
+	width: 177px;
+}
+
+/*========NAVIGATION==========*/
+
+.navbanner {
+	text-align: center;
+}
+
+.navbanner img {
+	width: 30px;
 }
 
 
@@ -26,6 +50,10 @@
 
 #discover {
 	background-color: rgb(0, 34, 62);
+}
+
+#seclist img {
+	width: 40px;
 }
 
 .secblue {
@@ -52,6 +80,10 @@
 
 #aircrafthall {
 	background-color: rgb(40, 123, 210);
+}
+
+.horipic {
+	width: 90%;
 }
 
 .discovinfo {
