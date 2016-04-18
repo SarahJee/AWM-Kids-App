@@ -38,17 +38,25 @@
 /*========NAVIGATION==========*/
 
 .navbanner {
-	text-align: center;
 	background-color: rgb(0, 34, 62);
-	padding-top: 10px;
+	padding: 10px;
 }
 
 .navbanner h6 {
+	text-align: center;
 	margin-bottom: 0;
 }
 
 .navbanner img {
 	width: 30px;
+}
+
+.backarrow {
+	float: left;
+}
+
+.homeicon {
+	float: right;
 }
 
 
@@ -63,6 +71,7 @@
 
 #seclist img {
 	width: 40px;
+	float: right;
 }
 
 .secblue {
@@ -73,18 +82,26 @@
 
 .secgreen {
 	background-color: rgb(48, 180, 74);
+	padding: 10px;
+	line-height: 2em;
 }
 
 .secpurple {
 	background-color: rgb(91, 85, 164);
+	padding: 10px;
+	line-height: 2em;
 }
 
 .secorange {
 	background-color: rgb(232, 145, 66);
+	padding: 10px;
+	line-height: 2em;
 }
 
 .secpink {
 	background-color: rgb(232, 73, 91);
+	padding: 10px;
+	line-height: 2em;
 }
 
 /*========DISCOVER SECTIONS==========*/
@@ -93,8 +110,14 @@
 	background-color: rgb(40, 123, 210);
 }
 
-.horipic {
+#aircrafthall h1 {
+	text-align: center;
+	padding: 10px;
+}
+
+.dispic {
 	width: 90%;
+	padding: 0 5% 5% 5%;
 }
 
 .discovinfo {
@@ -104,13 +127,63 @@
 	border-bottom: 3px solid #ffffff;
 }
 
+.mission {
+	padding: 20px;
+}
+
 .answers ul {
 	list-style-type: none;
 }
 
-/*========MAPS PAGE==========*/
-
-#maps {
-	background-color: rgb(0, 34, 62);
+/*========MODALS==========*/
+.correctanswer {
+	display: none;
 }
 
+.wronganswer {
+	display: none;
+}
+
+/*========MAPS PAGE==========*/
+
+#mgmap {
+	background-color: rgb(40, 123, 210);
+}
+
+#mgmap img {
+	width: 90%;
+	padding: 0 5% 5% 5%;
+}
+	
+
+#glmap {
+	background-color: rgb(48, 180, 74);
+}
+
+#glmap img {
+	width: 90%;
+	padding: 0 5% 5% 5%;
+}
+
+#ufmap {
+	background-color: rgb(91, 85, 164);
+}
+
+#ufmap img {
+	width: 90%;
+	padding: 0 5% 5% 5%;
+}
+
+#llmap {
+	background-color: rgb(232, 145, 66);
+}
+
+#llmap img {
+	width: 90%;
+	padding: 0 5% 5% 5%;
+}
+
+#mgmap h2, #glmap h2, #ufmap h2, #llmap h2 {
+	text-align: center;
+	padding:  10px 10px 0 10px;
+}
