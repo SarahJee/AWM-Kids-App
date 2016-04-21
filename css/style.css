@@ -18,21 +18,17 @@ ul, ol {
 	list-style-type: none;
 }
 
-/*li {
-	margin-bottom: 0;
-	font-size: 1.7em;
-	font-family: 'Stardos Stencil';
-	text-transform: uppercase;
-	border-bottom: solid #fff 3px;
-}*/
 
 
 /*========HOME PAGE==========*/
+
+
 #hmsoldier img {
 	width: 300px;
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
+	padding: 1em;
 }
 
 .homelink {
@@ -45,7 +41,7 @@ ul, ol {
 	text-align: center;
 }
 
-#hmdiscover:hover {
+#hmdiscover:hover, .secpink:hover {
 	background-color: rgba(249, 88, 107, 1);
 }
 
@@ -58,7 +54,8 @@ ul, ol {
 	text-align: center;
 }
 
-#hmmaps:hover {
+#hmmaps:hover,
+.secorange:hover {
 	background-color: rgba(249, 165, 87, 1);
 }
 
@@ -68,6 +65,10 @@ ul, ol {
 
 #hmawm {
 	background-color: rgb(0, 70, 128);
+}
+
+#hmawm:hover {
+	background-color: rgba(11, 97, 167, 1);
 }
 
 #hmawm img {
@@ -115,6 +116,9 @@ ul, ol {
 	padding: 20px;
 	margin-bottom: 3px;
 }
+#seclist > h4 {
+	padding: 10px;
+}
 
 #seclist img {
 	width: 40px;
@@ -123,39 +127,48 @@ ul, ol {
 
 .secblue {
 	background-color: rgb(40, 123, 210);
-	padding: 10px;
 	line-height: 2em;
+}
+
+.secblue:hover {
+	background-color: rgba(43, 142, 249, 1);
 }
 
 .secgreen {
 	background-color: rgb(48, 180, 74);
-	padding: 10px;
 	line-height: 2em;
+}
+
+.secgreen:hover {
+	background-color: rgba(53, 206, 83, 1);
 }
 
 .secpurple {
 	background-color: rgb(91, 85, 164);
-	padding: 10px;
 	line-height: 2em;
+}
+
+.secpurple:hover {
+	background-color: rgba(117, 107, 222, 1);
 }
 
 .secorange {
 	background-color: rgb(232, 145, 66);
-	padding: 10px;
 	line-height: 2em;
 }
 
 .secpink {
 	background-color: rgb(232, 73, 91);
-	padding: 10px;
 	line-height: 2em;
 }
+
 
 
 /*========DISCOVER SECTIONS==========*/
 
 #aircrafthall {
 	background-color: rgb(40, 123, 210);
+	display: none;
 }
 
 #aircrafthall h1 {
@@ -286,6 +299,7 @@ ul, ol {
 
 #mgmap {
 	background-color: rgb(40, 123, 210);
+	display: none;
 }
 
 #mgmap img {
@@ -296,7 +310,9 @@ ul, ol {
 
 #glmap {
 	background-color: rgb(48, 180, 74);
+	display: none;
 }
+
 
 #glmap img {
 	width: 90%;
@@ -305,6 +321,7 @@ ul, ol {
 
 #ufmap {
 	background-color: rgb(91, 85, 164);
+	display: none;
 }
 
 #ufmap img {
@@ -314,6 +331,7 @@ ul, ol {
 
 #llmap {
 	background-color: rgb(232, 145, 66);
+	display: none;
 }
 
 #llmap img {
@@ -326,15 +344,92 @@ ul, ol {
 	padding:  10px 10px 0 10px;
 }
 
+#maplist h4 {
+	padding: 10px;
+}
+
 
 /*========MEDIA QUERIES==========*/
 
 @media (min-width: 600px) {
 	
 	.container {
-		max-width: 760px;
-		margin-top: 5em;
+		max-width: 615px;
+		margin: 5em auto;
 	}
+	
+	/*------HOME PAGE---------*/
+	
+	#homepage {
+		width: 620px;
+		margin: 0 auto;
+	}
+	
+	#hmsoldier,
+	#hmdiscover,
+	#hmmaps,
+	#hmawm {
+		width: 300px;
+		display: inline-block;
+		height: 300px;
+		border: solid #fff 5px;
+	}
+	
+	#hmsoldier,
+	#hmawm {
+		float: left;
+	}
+	
+	#hmdiscover,
+	#hmmaps {
+		float: right;
+	}
+
+	#hmsoldier img {
+		background-color: #d8d8d8;
+		padding: 0;
+	}
+	
+	.homelink img {
+		padding-top: 38%;
+	}
+	
+	#hmawm img {
+	margin-top: 5px;
+	}
+	
+	
+	/*------MAPS PAGE---------*/
+	
+	.navbanner {
+		border-bottom: solid #fff 5px;
+		margin-right: 5px;
+	}
+	
+	.map {
+		width: 300px;
+		height: 300px;
+		border: solid #fff 5px;
+	}
+	
+	#maplist {
+		display: flex;
+		flex-wrap: wrap; 
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		width: 620px;
+		margin-left: -5px;
+	}
+	
+	#maplist h4 {
+		text-align: center;
+		padding-top: 40%;
+	}
+	#mgmap, #glmap, #ufmap, #llmap {
+		margin: 5px;
+	}
+	
+	 
 	
 	
 }
