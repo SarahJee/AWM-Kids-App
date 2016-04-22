@@ -1,6 +1,6 @@
 
 
-/*========GENERATL STYLES==========*/
+/*========GENERAL STYLES==========*/
 
 .container {
 	width: 100%;
@@ -16,6 +16,12 @@ p {
 
 ul, ol {
 	list-style-type: none;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: "Stardos Stencil";
+	text-transform: uppercase;
+	text-align: center;
 }
 
 
@@ -114,15 +120,22 @@ ul, ol {
 #discoverinfo {
 	background-color: rgb(0, 34, 62);
 	padding: 20px;
-	margin-bottom: 3px;
-}
-#seclist > h4 {
-	padding: 10px;
+	border-bottom: 3px solid #fff;
 }
 
-#seclist img {
+#seclist h4 {
+	padding: 10px;
+	display: inline-block;
+}
+
+.disc-list {
+	border-bottom: 3px solid #fff;
+}
+
+.disc-list img {
 	width: 40px;
 	float: right;
+	margin: 4px 20px 0 0;
 }
 
 .secblue {
@@ -171,14 +184,18 @@ ul, ol {
 	display: none;
 }
 
-#aircrafthall h1 {
+h1 {
 	text-align: center;
 	padding: 10px;
 }
 
 .dispic {
-	min-width: 90%;
-	padding: 5%;
+	max-width: 90%;
+	margin: 5%;
+}
+	
+#aircrafthall img {
+	border: 3px solid #fff;
 }
 
 .discovinfo {
@@ -191,7 +208,6 @@ ul, ol {
 .mission {
 	padding: 20px;
 	border-bottom: 3px solid #ffffff;
-	
 }
 
 #check-answer {
@@ -200,6 +216,7 @@ ul, ol {
 	border: 1.5px solid #ffffff;
 	height: 50px;
 	margin-bottom: 4em;
+	width: 100%;
 }
 
 #check-answer:hover {
@@ -207,7 +224,11 @@ ul, ol {
 	-webkit-transition: all 0.25s linear;
 }
 
-#check-answer h5 {
+#check-answer  {
+	font-family: "Stardos Stencil";
+	text-transform: uppercase;
+	font-size: 2em;
+	color: #fff;
 	padding-top: 5px;
 }
 
@@ -295,6 +316,7 @@ ul, ol {
 }
 
 /*========MODALS==========*/
+
 .correctanswer {
 	display: none;
 }
@@ -363,7 +385,7 @@ ul, ol {
 	
 	.container {
 		max-width: 615px;
-		margin: 5em auto;
+		margin: 4em auto;
 	}
 	
 	/*------HOME PAGE---------*/
@@ -420,6 +442,7 @@ ul, ol {
 		border: solid #fff 5px;
 	}
 	
+	
 	#maplist {
 		display: flex;
 		flex-wrap: wrap; 
@@ -433,11 +456,54 @@ ul, ol {
 		text-align: center;
 		padding-top: 40%;
 	}
+	
 	#mgmap, #glmap, #ufmap, #llmap {
 		margin: 5px;
 	}
 	
-	 
+	/*------DISCOVER MENU PAGE---------*/
+
+	
+	.disc-list {
+		width: 300px;
+		height: 300px;
+		border: 5px solid #fff;	
+	}
+	
+	
+	#seclist {
+		width: 620px;
+		display: flex;
+		flex-wrap: wrap;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		margin-left: -5px;
+	} 
+	
+	#seclist h4 {
+		padding-top: 35%;
+		padding-left:20px;	
+		padding-right: 20px;
+		display: block;
+	}
+	
+	.disc-list img {
+		margin-right: 44%;	
+	}	
+	
+	#discoverinfo {
+		padding: 0;
+		width: 300px;
+		height: 300px;
+	}
+	
+	#discoverinfo p {
+		padding: 20px;
+	}
+	
+	#aircrafthall {
+	border: solid #fff 5px;
+	}	
 	
 	
 }
