@@ -31,29 +31,30 @@ $('a.doSomething').click(function(){
 
 
 
+
 // Show hide Aircraft Hall Section
 $( ".secblue" ).click(function() {
- $( "#aircrafthall" ).toggle( "slow" );
+ $( "#aircrafthall" ).slideToggle( "slow" );
 });
 
 
 
 // Show hide Maps
 $( ".secblue" ).click(function() {
-  $( "#mgmap" ).toggle( "slow" );
+  $( "#mgmap" ).slideToggle( "slow" );
 });
 
 // Show hide Maps
 $( ".secgreen" ).click(function() {
-  $( "#glmap" ).toggle( "slow" );
+  $( "#glmap" ).slideToggle( "slow" );
 });
 
 // Show hide Maps
 $( ".secpurple" ).click(function() {
-  $( "#ufmap" ).toggle( "slow" );
+  $( "#ufmap" ).slideToggle( "slow" );
 });
 
 // Show hide Maps
 $( ".secorange" ).click(function() {
-  $( "#llmap" ).toggle( "slow" );
+  $( "#llmap" ).slideToggle( "slow" );
 });
