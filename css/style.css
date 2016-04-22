@@ -177,8 +177,8 @@ ul, ol {
 }
 
 .dispic {
-	width: 90%;
-	padding: 0 5% 5% 5%;
+	min-width: 90%;
+	padding: 5%;
 }
 
 .discovinfo {
@@ -190,18 +190,25 @@ ul, ol {
 
 .mission {
 	padding: 20px;
+	border-bottom: 3px solid #ffffff;
+	
 }
 
-#checkblue {
-	margin-top: 40px;
-	background-color: rgb(40, 123, 210);
+#check-answer {
+	margin-top: 60px;
+	background-color: rgb(0, 34, 62);
 	border: 1.5px solid #ffffff;
 	height: 50px;
+	margin-bottom: 4em;
 }
 
-#checkblue:hover {
-	background-color: rgb(0, 34, 62);
+#check-answer:hover {
+	background-color: rgb(40, 123, 210);
 	-webkit-transition: all 0.25s linear;
+}
+
+#check-answer h5 {
+	padding-top: 5px;
 }
 
 /*========RADIO BUTTON STYLES==========*/
@@ -228,9 +235,10 @@ ul, ol {
 }
 
 .answers ul li label {
+	font-size: 1.3em;
 	display: block;
 	position: relative;
-	padding: 20px 20px 20px 60px;
+	padding: 15px 20px 20px 60px;
 	margin: 10px auto;
 	height: 30px;
 	z-index: 9;
