@@ -261,12 +261,12 @@ h1 {
 /*http://codepen.io/AngelaVelasquez/pen/Eypnq*/
 
 
-.answers ul {
+.answer-choices ul {
 	list-style-type: none;
 	margin-top: -30px;
 }
 
-.answers ul li { 
+.answer-choices ul li { 
 	color: white;
 	display: block;
 	position: relative;
@@ -275,12 +275,12 @@ h1 {
 	height: 30px;
 }
 
-.answers ul li input[type=radio] {
+.answer-choices ul li input[type=radio] {
 	position: absolute;
 	visibility: hidden;
 }
 
-.answers ul li label {
+.answer-choices ul li label {
 	font-size: 1.3em;
 	display: block;
 	position: relative;
@@ -292,11 +292,11 @@ h1 {
 	-webkit-transition: all 0.25s linear;
 }
 
-.answers ul li:hover label {
+.answer-choices ul li:hover label {
 	color: rgb(0, 34, 62);
 }
 
-.answers ul li .check {
+.answer-choices ul li .check {
 	display: block;
 	position: absolute;
 	border: 3px solid #ffffff;
@@ -310,11 +310,11 @@ h1 {
 	-webkit-transition: border .25s linear;
 }
 
-.answers ul li:hover .check {
+.answer-choices ul li:hover .check {
 	border: 3px solid rgb(0, 34, 62);
 }
 
-.answers ul li .check::before {
+.answer-choices ul li .check::before {
 	display: block;
 	position: absolute;
 	content: '';
@@ -328,15 +328,15 @@ h1 {
 	-webkit-transition: background 0.25s linear;
 }
 
-.answers input[type=radio]:checked ~ .check {
+.answer-choices input[type=radio]:checked ~ .check {
 	border: 3px solid rgb(0, 34, 62);
 }
 
-.answers input[type=radio]:checked ~ .check::before {
+.answer-choices input[type=radio]:checked ~ .check::before {
 	background: rgb(0, 34, 62);
 }
 
-.answers input[type=radio]:checked ~ label {
+.answer-choices input[type=radio]:checked ~ label {
 	color: rgb(0, 34, 62);
 }
 
