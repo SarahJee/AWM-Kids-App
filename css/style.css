@@ -42,12 +42,12 @@ h1, h2, h3, h4, h5 {
 	height: 130px;
 }
 
-#hmdiscover {
+#hmdiscover, .ah-pink {
 	background-color: rgb(232, 73, 91);
 	text-align: center;
 }
 
-#hmdiscover:hover, .secpink:hover {
+#hmdiscover:hover, .ah-pink:hover {
 	background-color: rgba(249, 88, 107, 1);
 }
 
@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5 {
 }
 
 #hmmaps:hover,
-.secorange:hover {
+.hov-orange:hover {
 	background-color: rgba(249, 165, 87, 1);
 }
 
@@ -138,39 +138,39 @@ h1, h2, h3, h4, h5 {
 	margin: 4px 20px 0 0;
 }
 
-.secblue {
+.ah-blue, .hom-blue {
 	background-color: rgb(40, 123, 210);
 	line-height: 2em;
 }
 
-.secblue:hover {
+.ah-blue:hover, .hom-blue:hover {
 	background-color: rgba(43, 142, 249, 1);
 }
 
-.secgreen {
+.fww-green, .con-green {
 	background-color: rgb(48, 180, 74);
 	line-height: 2em;
 }
 
-.secgreen:hover {
+.fww-green:hover, .con-green:hover {
 	background-color: rgba(53, 206, 83, 1);
 }
 
-.secpurple {
+.sww-purple, mg-purple {
 	background-color: rgb(91, 85, 164);
 	line-height: 2em;
 }
 
-.secpurple:hover {
+.sww-purple:hover, mg-purple:hover {
 	background-color: rgba(117, 107, 222, 1);
 }
 
-.secorange {
+.hov-orange, .sg-orange {
 	background-color: rgb(232, 145, 66);
 	line-height: 2em;
 }
 
-.secpink {
+.ah-pink {
 	background-color: rgb(232, 73, 91);
 	line-height: 2em;
 }
@@ -179,9 +179,30 @@ h1, h2, h3, h4, h5 {
 
 /*========DISCOVER SECTIONS==========*/
 
-#aircrafthall {
-	background-color: rgb(40, 123, 210);
+#aircrafthall, #firstworldwar, #secondworldwar, 
+#hallofvalour, #anzachall, #hallofmemory, 
+#conflicts45today, #memorialgrounds, #sculpturegarden {
 	display: none;
+}
+
+#aircrafthall, #hallofmemory {
+	background-color: rgb(40, 123, 210);
+}
+
+#firstworldwar, #conflicts45today {
+	background-color:rgb(48, 180, 74);
+}
+
+#secondworldwar, #memorialgrounds {
+	background-color:rgb(91, 85, 164);
+}
+
+#hallofvalour, #sculpturegarden {
+	background-color:rgb(232, 145, 66);
+}
+
+#anzachall {
+	background-color: rgb(232, 73, 91);
 }
 
 h1 {
@@ -230,6 +251,10 @@ h1 {
 	font-size: 2em;
 	color: #fff;
 	padding-top: 5px;
+}
+
+.answerConfirm {
+	display: none;
 }
 
 /*========RADIO BUTTON STYLES==========*/
@@ -376,6 +401,26 @@ h1 {
 
 #maplist h4 {
 	padding: 10px;
+}
+
+.map-blue {
+	background-color: rgb(40, 123, 210);
+}
+
+.map-blue {
+	background-color: rgb(40, 123, 210);
+}
+
+.map-purple {
+	background-color: rgb(91, 85, 164);
+}
+
+.map-orange {
+	background-color: rgb(232, 145, 66);
+}
+
+.map-green {
+	background-color: rgb(48, 180, 74);
 }
 
 
