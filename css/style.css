@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5 {
 	height: 130px;
 }
 
-#hmdiscover, .ah-pink {
+#hmdiscover  {
 	background-color: rgb(232, 73, 91);
 	text-align: center;
 }
@@ -342,13 +342,11 @@ h1 {
 
 /*========MODALS==========*/
 
-.correctanswer {
+.correctAnswer {
 	display: none;
 }
 
-.wronganswer {
-	display: none;
-}
+
 
 /*========MAPS PAGE==========*/
 
