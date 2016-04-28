@@ -38,8 +38,6 @@ $('.map[data-target]').click(function() {
 });
 
 
-
-
 // Toggle question sections on click. 
 $('.disc-list[data-target]').click(function() {
     var target = $(this).data('target');
@@ -48,6 +46,30 @@ $('.disc-list[data-target]').click(function() {
 
 
 
+// Add chevron to map item when toggle is open.
+$(".map").click(function(e) {
+
+        if( $(this).hasClass("open") ) {
+            $(this).removeClass("open").addClass("closed");
+        } else {
+            // if other maps are open remove open class and add closed
+            $(this).siblings().removeClass("open").addClass("closed"); 
+            $(this).removeClass("closed").addClass("open");
+        }
+
+});
+// Add chevron to discovery section item when toggle is open.
+$(".disc-list").click(function(e) {
+
+        if( $(this).hasClass("open") ) {
+            $(this).removeClass("open").addClass("closed");
+        } else {
+            // if other maps are open remove open class and add closed
+            $(this).siblings().removeClass("open").addClass("closed"); 
+            $(this).removeClass("closed").addClass("open");
+        }
+
+});
 
 
 
@@ -58,44 +80,42 @@ $('.disc-list[data-target]').click(function() {
 var answers = ["a","a","b","c","b","a","b","a","c"];
 //Total # of possible answers
     total = answers.length;
+ var score = 0;
     
-var checkedValue = getCheckedValue(  );
-
 
 //Create a function to store the users answer choice input (correct or not)
-function getCheckedValue( radioName ){
+function getCheckedValue( question, radioName ){
  	var radios = document.getElementsByName( radioName ); //Find the answer choices for each question
-    for(var y=0; y<radios.length; y++) //Loop through answers to find checked?
-      if(radios[y].checked) return radios[y].value; // return the checked value ie the chosen answer/input
+ 	var checkedValue;
+    for(var y=0; y<radios.length; y++) //Loop through answers to find checked answer
+      if(radios[y].checked) checkedValue = radios[y].value;  // store the checked value ie the chosen answer/input
 
-
-    //Create a function to display answer and if correct or not
-		function checkAnswer(){
-			if (checkedValue === answers[y]) {
+    // display answer and if correct or not
+			if (checkedValue === answers[question]) {
 				alert("Correct");
+				score++
 			} else {
-				//var response = document.getElementsByClassName( answerConfirm );
 				alert ("Incorrect");
 			}
 }
-}
+
 
 //========================This section is to display at the very end when all 9 questions have been answered=================//
-function returnAnswer(){
-  alert("Your score is "+ getScore() +"/"+ total);
-  }
+
+
 
 
 // return total score 
-function getScore(){
-  var score = 0;
-  for (var i=0; i<total; i++)
-    if(getCheckedValue("answer"+i)===answers[i]) score += 1; // add one when answer is correct
-  return score; // Store score in 'getScore'
-}
+//function getScore(){
+//  var score = 0;
+//  for (var i=0; i<total; i++)
+//    if(getCheckedValue("answer"+i)===answers[i]) score += 1; // add one when answer is correct
+//  return score; // Store score in 'getScore'
+//}
 
 function returnScore(){
-  document.getElementById("myresults").innerHTML = "Your score is "+ getScore() +"/"+ total;
+  document.getElementById("myResults").innerHTML = "Your score is "+ score() +"/"+ total;
 }
+
 
 

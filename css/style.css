@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5 {
 }
 
 #hmmaps:hover,
-.hov-orange:hover, .sg-orange:hover {
+.hov-orange:hover {
 	background-color: rgba(249, 165, 87, 1);
 }
 
@@ -124,7 +124,7 @@ h1, h2, h3, h4, h5 {
 }
 
 #seclist h4 {
-	padding: 10px;
+	padding: 30px;
 	display: inline-block;
 }
 
@@ -135,7 +135,7 @@ h1, h2, h3, h4, h5 {
 .disc-list img {
 	width: 40px;
 	float: right;
-	margin: 4px 20px 0 0;
+	margin: 25px 20px 0 0;
 }
 
 .ah-blue, .hom-blue {
@@ -354,11 +354,6 @@ h1 {
 	background-color: rgb(40, 123, 210);
 	display: none;
 }
-
-#mgmap img {
-	width: 90%;
-	padding: 0 5% 5% 5%;
-}
 	
 
 #glmap {
@@ -366,30 +361,20 @@ h1 {
 	display: none;
 }
 
-
-#glmap img {
-	width: 90%;
-	padding: 0 5% 5% 5%;
-}
-
 #ufmap {
 	background-color: rgb(91, 85, 164);
 	display: none;
 }
 
-#ufmap img {
-	width: 90%;
-	padding: 0 5% 5% 5%;
-}
 
 #llmap {
 	background-color: rgb(232, 145, 66);
 	display: none;
 }
 
-#llmap img {
+#mgmap img, #llmap img, #ufmap img, #glmap img {
 	width: 90%;
-	padding: 0 5% 5% 5%;
+	padding: 5%;
 }
 
 #mgmap h2, #glmap h2, #ufmap h2, #llmap h2 {
@@ -398,7 +383,11 @@ h1 {
 }
 
 #maplist h4 {
-	padding: 10px;
+	padding: 30px;
+}
+
+#maplist img {
+	padding-top: 30px;
 }
 
 .map-blue {
@@ -419,6 +408,14 @@ h1 {
 
 .map-green {
 	background-color: rgb(48, 180, 74);
+}
+
+/* Add arrow to close open map or section */
+.map.open {
+	background-image: url('../images/chevron.png');
+	background-repeat: no-repeat;
+	background-position-x: 50%;
+	background-position-y: 90%;
 }
 
 
@@ -531,7 +528,8 @@ h1 {
 	}
 	
 	.disc-list img {
-		margin-right: 44%;	
+		margin-right: 44%;
+		margin-top: -20px;	
 	}	
 	
 	#discoverinfo {
