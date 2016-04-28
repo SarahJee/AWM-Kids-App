@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5 {
 }
 
 #hmmaps:hover,
-.hov-orange:hover {
+.hov-orange:hover, .sg-orange:hover {
 	background-color: rgba(249, 165, 87, 1);
 }
 
