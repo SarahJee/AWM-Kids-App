@@ -114,7 +114,7 @@ function getCheckedValue( question, radioName ){
 //}
 
 function returnScore(){
-  document.getElementById("myResults").innerHTML = "Your score is "+ score() +"/"+ total;
+  document.getElementByClass("myResults").innerHTML = "Your score is "+ score() +"/"+ total;
 }
 
 

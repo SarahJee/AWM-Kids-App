@@ -4,6 +4,7 @@
 
 .container {
 	width: 100%;
+	padding: 0!important;
 }
 
 a {
@@ -231,7 +232,7 @@ h1 {
 	border-bottom: 3px solid #ffffff;
 }
 
-#check-answer {
+button.check-answer {
 	margin-top: 60px;
 	background-color: rgb(0, 34, 62);
 	border: 1.5px solid #ffffff;
@@ -240,12 +241,14 @@ h1 {
 	width: 100%;
 }
 
-#check-answer:hover {
+button.check-answer:hover {
 	background-color: rgb(40, 123, 210);
 	-webkit-transition: all 0.25s linear;
+	color: #fff;
+	border-color: #fff;
 }
 
-#check-answer  {
+button.check-answer  {
 	font-family: "Stardos Stencil";
 	text-transform: uppercase;
 	font-size: 2em;
@@ -411,7 +414,7 @@ h1 {
 }
 
 /* Add arrow to close open map or section */
-.map.open {
+.map.open, .disc-list.open {
 	background-image: url('../images/chevron.png');
 	background-repeat: no-repeat;
 	background-position-x: 50%;
@@ -420,6 +423,14 @@ h1 {
 
 
 /*========MEDIA QUERIES==========*/
+
+@media (max-width: 414px) {
+	#seclist h4 {
+		word-wrap: break-word;
+		width: 60%;
+		text-align: left;
+		}
+}
 
 @media (min-width: 600px) {
 	

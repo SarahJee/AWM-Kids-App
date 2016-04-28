@@ -49,7 +49,7 @@
     
 	 <!-- AIRCRAFT HALL SECTION -->
 	
-	<div class="ah-blue disc-list" data-target="aircrafthall"><h4>Aircraft Hall</h4>
+	<div class="ah-blue disc-list closed" data-target="aircrafthall"><h4>Aircraft Hall</h4>
 	<img src="icons/planeicon.svg" alt="planeicon"></div> 
 	    
   <div id="aircrafthall">
@@ -67,25 +67,25 @@
 	            
               <ul>
 	              
-                <li><input type="radio" name="answer1" id="1-option" value="a"> 
-                <label for="1-option">Kittyhawk ‘Polly’</label><!--Correct Answer-->
+                <li><input type="radio" name="answer1" id="1-opt1" value="a"> 
+                <label for="1-opt1">Kittyhawk ‘Polly’</label><!--Correct Answer-->
                 <div class="check"></div>
                 </li>
                 
-                <li><input type="radio" name="answer1" id="2-option" value="b">
-                <label for="2-option">Mustang Sally</label>
+                <li><input type="radio" name="answer1" id="1-opt2" value="b">
+                <label for="1-opt2">Mustang Sally</label>
                 <div class="check">
 		        </div>
 		        </li>
 		        
-                <li><input type="radio" name="answer1" id="3-option" value="c">
-                <label for="3-option">Wirraway John</label>
+                <li><input type="radio" name="answer1" id="1-opt3" value="c">
+                <label for="1-opt3">Wirraway John</label>
                 <div class="check">
 		        </div>
 		        </li>
 		        
               </ul>
-              <button onclick="getCheckedValue(0,'answer1')" id="check-answer">Check Answer</button>
+              <button onclick="getCheckedValue(0,'answer1')" class="check-answer">Check Answer</button>
               
 
             </div><!--End .answers-->
@@ -103,7 +103,7 @@
   
     <!-- FIRST WORLD WAR SECTION -->
   
-      <div class="fww-green disc-list" data-target="firstworldwar"><h4>First World War</h4>
+      <div class="fww-green disc-list closed" data-target="firstworldwar"><h4>First World War</h4>
       <img src="icons/helmeticon.svg" alt="helmeticon"></div>
   
   <div id="firstworldwar">
@@ -121,26 +121,26 @@
               
             <ul>
                 
-                <li><input type="radio" name="answer2" id="1-option" value="a"> 
-                <label for="1-option">Suez Canal</label><!--Correct Answer-->
+                <li><input type="radio" name="answer2" id="2-opt1" value="a"> 
+                <label for="2-opt1">Suez Canal</label><!--Correct Answer-->
                 <div class="check"></div>
                 </li>
                 
-                <li><input type="radio" name="answer2" id="2-option" value="b">
-                <label for="2-option">Panama Canal</label>
+                <li><input type="radio" name="answer2" id="2-opt2" value="b">
+                <label for="2-opt2">Panama Canal</label>
                 <div class="check">
                 </div>
                 </li>
             
-                <li><input type="radio" name="answer2" id="3-option" value="c">
-                <label for="3-option">Suzhou Canals</label>
+                <li><input type="radio" name="answer2" id="2-opt3" value="c">
+                <label for="2-opt3">Suzhou Canals</label>
                 <div class="check">
                 </div>
                 </li>
             </ul>
               
-              <button onclick="getCheckedValue(1,'answer2')" id="check-answer">Check Answer</button>
-              <span id="myresults">My results should appear here</span>
+              <button onclick="getCheckedValue(1,'answer2')" class="check-answer">Check Answer</button>
+              <span class="myresults">My results should appear here</span>
               
             </div><!--End .answers-->
         </div><!--End .mission-->         
@@ -157,7 +157,7 @@
 
   <!-- SECOND WORLD WAR SECTION -->
   
-	 <div class="sww-purple disc-list" data-target="secondworldwar"><h4>Second World War</h4> 
+	 <div class="sww-purple disc-list closed" data-target="secondworldwar"><h4>Second World War</h4> 
 	 <img src="icons/soldiericon.svg" alt="soldiericon"></div>
  
   <div id="secondworldwar">
@@ -175,27 +175,27 @@
               
               <ul>
                 
-                <li><input type="radio" name="answer3" id="1-option" value="a"> 
-                <label for="1-option">On 19 December 1941</label>
+                <li><input type="radio" name="answer3" id="3-opt1" value="a"> 
+                <label for="3-opt1">On 19 December 1941</label>
                 <div class="check"></div>
                 </li>
                 
-                <li><input type="radio" name="answer3" id="2-option" value="b">
-                <label for="2-option">On 19 February 1942</label> <!--Correct Answer-->
+                <li><input type="radio" name="answer3" id="3-opt2" value="b">
+                <label for="3-opt2">On 19 February 1942</label> <!--Correct Answer-->
                 <div class="check">
                 </div>
                 </li>
             
-                <li><input type="radio" name="answer3" id="3-option" value="c">
-                <label for="3-option">On 19 January 1942</label>
+                <li><input type="radio" name="answer3" id="3-opt3" value="c">
+                <label for="3-opt3">On 19 January 1942</label>
                 <div class="check">
                 </div>
                 </li>
             
               </ul>
               
-              <button onclick="getCheckedValue(2,'answer3')" id="check-answer" >Check Answer</button>
-              <span id="myresults">My results should appear here</span>
+              <button onclick="getCheckedValue(2,'answer3')" class="check-answer" >Check Answer</button>
+              <span class="myresults">My results should appear here</span>
               
             </div><!--End .answers-->
         </div><!--End .mission-->
@@ -212,7 +212,7 @@
 
   <!-- HALL OF VALOUR SECTION -->
   
-    <div class="hov-orange disc-list" data-target="hallofvalour"><h4>Hall of Valour</h4> 
+    <div class="hov-orange disc-list closed" data-target="hallofvalour"><h4>Hall of Valour</h4> 
     <img src="icons/medalicon.svg" alt="medalicon"></div>
     
   <div id="hallofvalour">
@@ -231,27 +231,27 @@
               
               <ul>
                 
-                <li><input type="radio" name="answer4" id="1-option" value="a"> 
-                <label for="1-option">Lieutenant James Rogers</label>
+                <li><input type="radio" name="answer4" id="4-opt1" value="a"> 
+                <label for="4-opt1">Lieutenant James Rogers</label>
                 <div class="check"></div>
                 </li>
                 
-                <li><input type="radio" name="answer4" id="2-option" value="b">
-                <label for="2-option">Lieutenant Colonel Leslie Cecil Maygar</label>
+                <li><input type="radio" name="answer4" id="4-opt2" value="b">
+                <label for="4-opt2">Lieutenant Colonel Leslie Cecil Maygar</label>
                 <div class="check">
                 </div>
 				</li>
             
-                <li><input type="radio" name="answer4" id="3-option" value="c">
-                <label for="3-option">Major General Neville Reginald Howse</label><!--Correct Answer-->
+                <li><input type="radio" name="answer4" id="4-opt3" value="c">
+                <label for="4-opt3">Major General Neville Reginald Howse</label><!--Correct Answer-->
                 <div class="check">
 				</div>
 				</li>
             
               </ul>
               
-              <button onclick="getCheckedValue(3,'answer4')" id="check-answer" >Check Answer</button>
-              <span id="myresults">My results should appear here</span>
+              <button onclick="getCheckedValue(3,'answer4')" class="check-answer" >Check Answer</button>
+              <span class="myresults">My results should appear here</span>
               
             </div><!--End .answers-->
         </div><!--End .mission-->                  
@@ -267,7 +267,7 @@
 
   <!-- ANZAC HALL SECTION -->
   
-    <div class="ah-pink disc-list" data-target="anzachall"><h4>Anzac Hall</h4>
+    <div class="ah-pink disc-list closed" data-target="anzachall"><h4>Anzac Hall</h4>
     <img src="icons/anzacicon.svg" alt="anzacicon"></div>
       
   <div id="anzachall">
@@ -286,27 +286,27 @@
               
               <ul>
                 
-                <li><input type="radio" name="answer5" id="1-option" value="a"> 
-                <label for="1-option">O for Oscar</label>
+                <li><input type="radio" name="answer5" id="5-opt1" value="a"> 
+                <label for="5-opt2">O for Oscar</label>
                 <div class="check"></div>
                 </li>
                 
-                <li><input type="radio" name="answer5" id="2-option" value="b">
-                <label for="2-option">G for George</label><!--Correct Answer-->
+                <li><input type="radio" name="answer5" id="5-opt2" value="b">
+                <label for="5-opt2">G for George</label><!--Correct Answer-->
                 <div class="check">
 				</div>
 				</li>
             
-                <li><input type="radio" name="answer5" id="3-option" value="c">
-                <label for="3-option">P for Polly</label>
+                <li><input type="radio" name="answer5" id="5-opt3" value="c">
+                <label for="5-opt3">P for Polly</label>
                 <div class="check">
 				</div>
 				</li>
             
               </ul>
               
-            <button onclick="getCheckedValue(4,'answer5')" id="check-answer" >Check Answer</button>
-            <span id="myresults">My results should appear here</span>
+            <button onclick="getCheckedValue(4,'answer5')" class="check-answer" >Check Answer</button>
+            <span class="myresults">My results should appear here</span>
             
             </div><!--End .answers-->
         </div><!--End .mission-->                  
@@ -323,7 +323,7 @@
 
   <!-- HALL OF MEMORY SECTION -->
   
-    <div class="hom-blue disc-list" data-target="hallofmemory"><h4>Hall of Memory</h4>
+    <div class="hom-blue disc-list closed" data-target="hallofmemory"><h4>Hall of Memory</h4>
     <img src="icons/poppyicon.svg" alt="poppyicon"></div>
     
   <div id="hallofmemory">
@@ -341,27 +341,27 @@
               
               <ul>
                 
-                <li><input type="radio" name="answer6" id="1-option" value="a"> 
-                <label for="1-option">A quality of Australian servicemen and women</label><!--Correct Answer-->
+                <li><input type="radio" name="answer6" id="6-opt1" value="a"> 
+                <label for="6-opt1">A quality of Australian servicemen and women</label><!--Correct Answer-->
                 <div class="check"></div>
                 </li>
                 
-                <li><input type="radio" name="answer6" id="2-option" value="b">
-                <label for="2-option">The years of the First World War</label>
+                <li><input type="radio" name="answer6" id="6-opt2" value="b">
+                <label for="6-opt2">The years of the First World War</label>
                 <div class="check">
 				</div>
 				</li>
             
-                <li><input type="radio" name="answer6" id="3-option" value="c">
-                <label for="3-option">The number of battles fought in WW1</label>
+                <li><input type="radio" name="answer6" id="6-opt3" value="c">
+                <label for="6-opt3">The number of battles fought in WW1</label>
                 <div class="check">
 				</div>
 				</li>
             
               </ul>
               
-              <button onclick="getCheckedValue(5,'answer6')" id="check-answer" >Check Answer</button>
-              <span id="myresults">My results should appear here</span>
+              <button onclick="getCheckedValue(5,'answer6')" class="check-answer" >Check Answer</button>
+              <span class="myresults">My results should appear here</span>
               
             </div><!--End .answers-->
         </div><!--End .mission-->                    
@@ -376,7 +376,7 @@
 
   <!-- CONFLICTS 1945 to TODAY SECTION -->
   
-    <div class="con-green disc-list" data-target="conflicts45today"><h4>Conflicts 1945-today</h4> 
+    <div class="con-green disc-list closed" data-target="conflicts45today"><h4>Conflicts 1945-today</h4> 
     <img src="icons/grenadeicon.svg" alt="grenadeicon"></div>
     
   <div id="conflicts45today">
@@ -396,27 +396,27 @@ Which one of these wars did the HMAS Brisbane serve in?</p>
               
               <ul>
                 
-                <li><input type="radio" name="answer7" id="1-option" value="a"> 
-                <label for="1-option">WW1</label>
+                <li><input type="radio" name="answer7" id="7-opt1" value="a"> 
+                <label for="7-opt1">WW1</label>
                 <div class="check"></div>
                 </li>
                 
-                <li><input type="radio" name="answer7" id="2-option" value="b">
-                <label for="2-option">First Gulf War</label><!--Correct Answer-->
+                <li><input type="radio" name="answer7" id="7-opt2" value="b">
+                <label for="7-opt2">First Gulf War</label><!--Correct Answer-->
                 <div class="check">
 				</div>
 				</li>
             
-                <li><input type="radio" name="answer7" id="3-option" value="c">
-                <label for="3-option">Korean War</label>
+                <li><input type="radio" name="answer7" id="7-opt3" value="c">
+                <label for="7-opt3">Korean War</label>
                 <div class="check">
 				</div>
 				</li>
             
               </ul>
               
-            <button onclick="getCheckedValue(6,'answer7')" id="check-answer" >Check Answer</button>
-            <span id="myresults">My results should appear here</span>            
+            <button onclick="getCheckedValue(6,'answer7')" class="check-answer" >Check Answer</button>
+            <span class="myresults">My results should appear here</span>            
              
             </div><!--End .answers-->
         </div><!--End .mission-->                       
@@ -431,7 +431,7 @@ Which one of these wars did the HMAS Brisbane serve in?</p>
 
   <!-- MEMORIAL GROUNDS SECTION -->
   
-    <div class="sww-purple disc-list" data-target="memorialgrounds"><h4>Memorial Grounds</h4> 
+    <div class="sww-purple disc-list closed" data-target="memorialgrounds"><h4>Memorial Grounds</h4> 
     <img src="icons/awmicon.svg" alt="awmicon"></div>
       
   <div id="memorialgrounds">
@@ -449,27 +449,27 @@ Which one of these wars did the HMAS Brisbane serve in?</p>
               
               <ul>
                 
-                <li><input type="radio" name="answer8" id="1-option"> 
-                <label for="1-option">Charles Bean and John Treloar</label><!--Correct Answer-->
+                <li><input type="radio" name="answer8" id="8-opt1"> 
+                <label for="8-opt1">Charles Bean and John Treloar</label><!--Correct Answer-->
                 <div class="check"></div>
                 </li>
                 
-                <li><input type="radio" name="answer8" id="2-option">
-                <label for="2-option">A.W Bazley and Charles Bean</label>
+                <li><input type="radio" name="answer8" id="8-opt2">
+                <label for="8-opt2">A.W Bazley and Charles Bean</label>
                 <div class="check">
 				</div>
 				</li>
             
-                <li><input type="radio" name="answer8" id="3-option">
-                <label for="3-option">John Charles and Andrew White</label>
+                <li><input type="radio" name="answer8" id="8-opt3">
+                <label for="8-opt3">John Charles and Andrew White</label>
                 <div class="check">
 				</div>
 				</li>
             
               </ul>
               
-            <button onclick="getCheckedValue(7,'answer8')" id="check-answer" >Check Answer</button>
-            <span id="myresults">My results should appear here</span>
+            <button onclick="getCheckedValue(7,'answer8')" class="check-answer" >Check Answer</button>
+            <span class="myresults">My results should appear here</span>
             
             </div><!--End .answers-->
         </div> <!--End .mission-->             
@@ -486,7 +486,7 @@ Which one of these wars did the HMAS Brisbane serve in?</p>
 
    <!-- SCULPTURE GARDEN SECTION -->
    
-    <div class="sg-orange disc-list" data-target="sculpturegarden"><h4>Sculpture Garden</h4>
+    <div class="sg-orange disc-list closed" data-target="sculpturegarden"><h4>Sculpture Garden</h4>
     <img src="icons/treeicon.svg" alt="treeicon"></div>
           
   <div id="sculpturegarden">
@@ -504,26 +504,26 @@ Which one of these wars did the HMAS Brisbane serve in?</p>
               
               <ul>
                 
-                <li><input type="radio" name="answer9" id="1-option"> 
-                <label for="1-option">Private Edward Simpson Kilpatrick</label>
+                <li><input type="radio" name="answer9" id="9-opt1"> 
+                <label for="9-opt1">Private Edward Simpson Kilpatrick</label>
                 <div class="check"></div>
                 </li>
                 
-                <li><input type="radio" name="answer9" id="2-option">
-                <label for="2-option">Private Joseph Simpson Kirk Patterson</label>
+                <li><input type="radio" name="answer9" id="9-opt2">
+                <label for="9-opt2">Private Joseph Simpson Kirk Patterson</label>
                 <div class="check">
 				</div>
 				</li>
             
-                <li><input type="radio" name="answer9" id="3-option">
-                <label for="3-option">Private John Simpson Kirkpatrick </label><!--Correct Answer-->
+                <li><input type="radio" name="answer9" id="9-opt3">
+                <label for="9-opt3">Private John Simpson Kirkpatrick </label><!--Correct Answer-->
                 <div class="check">
 				</div>
 				</li>
             
               </ul>
               
-              <button onclick="getCheckedValue(8,'answer9')" id="check-answer" >Check Answer</button>
+              <button onclick="getCheckedValue(8,'answer9')" class="check-answer" >Check Answer</button>
               
             </div><!--End .answers-->
         </div><!--End .mission-->              
@@ -538,7 +538,7 @@ Which one of these wars did the HMAS Brisbane serve in?</p>
  
  <!--Results - to add to modal or new page? -->       
 <button onclick="returnScore()">View Results</button>
-<span id="myResults">My results should appear here</span>
+<span class="myResults">My results should appear here</span>
 
 </div><!-- End seclist -->
 </div><!-- End container -->
