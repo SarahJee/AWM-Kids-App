@@ -19,10 +19,14 @@ ul, ol {
 	list-style-type: none;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4 {
 	font-family: "Stardos Stencil";
 	text-transform: uppercase;
 	text-align: center;
+}
+
+h5 {
+	text-align: left;
 }
 
 
@@ -62,7 +66,8 @@ h1, h2, h3, h4, h5 {
 }
 
 #hmmaps:hover,
-.hov-orange:hover {
+.hov-orange:hover, 
+.sg-orange:hover {
 	background-color: rgba(249, 165, 87, 1);
 }
 
@@ -349,9 +354,20 @@ button.check-answer  {
 	display: none;
 }
 
+/*add class if we need it?*/
 .alert-correct {
-	border: red solid 2px;
+	background-image: url('images/modal-background.png');
 }
+
+.sweet-alert button {
+	background-color: rgb(0, 34, 62)!important;
+	color: #fff;
+	font-family: "Stardos Stencil";
+	padding-top: 2px;
+	border-radius: 2px;
+}
+
+
 
 
 
@@ -566,7 +582,9 @@ button.check-answer  {
 		padding: 20px;
 	}
 	
-	#aircrafthall {
+	#aircrafthall, #firstworldwar, #secondworldwar, #hallofvalour,
+	#anzachall, #hallofmemory, #conflicts45today, #memorialgrounds,
+	#sculpturegarden {
 	border: solid #fff 5px;
 	}	
 	

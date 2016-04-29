@@ -90,7 +90,7 @@ function getCheckedValue( question, radioName ){
     for(var y=0; y<radios.length; y++) //Loop through answers to find checked answer
       if(radios[y].checked) checkedValue = radios[y].value;  // store the checked value ie the chosen answer/input
 
-    // display answer and if correct or not
+// display answer and if correct or not (Use SweetAlert)
 			if (checkedValue === answers[question]) {
 				swal({   title: "CORRECT!",   
 						 text: "Work out how to generate this dynamically from html.",   	
@@ -99,8 +99,8 @@ function getCheckedValue( question, radioName ){
 						 confirmButtonText: "NEXT MISSION"
 						});
 			} else {
-				swal({   title: "INCORRECT!",   
-						 text: "Work out how to generate this dynamically from html.",   	
+				swal({   title: "WRONG ANSWER!",   
+						 text: "answerParagraphs[question]",   	
 						 imageUrl: "icons/incorrect.png", 
 						 customClass: "alert-incorrect",
 						 confirmButtonText: "NEXT MISSION"
@@ -108,6 +108,10 @@ function getCheckedValue( question, radioName ){
 				
 			}
 }
+
+
+
+
 
 
 //========================This section is to display at the very end when all 9 questions have been answered=================//
