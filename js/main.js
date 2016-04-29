@@ -92,10 +92,20 @@ function getCheckedValue( question, radioName ){
 
     // display answer and if correct or not
 			if (checkedValue === answers[question]) {
-				alert("Correct");
-				score++
+				swal({   title: "CORRECT!",   
+						 text: "Work out how to generate this dynamically from html.",   	
+						 imageUrl: "icons/correct.png", 
+						 customClass: "alert-correct", 
+						 confirmButtonText: "NEXT MISSION"
+						});
 			} else {
-				alert ("Incorrect");
+				swal({   title: "INCORRECT!",   
+						 text: "Work out how to generate this dynamically from html.",   	
+						 imageUrl: "icons/incorrect.png", 
+						 customClass: "alert-incorrect",
+						 confirmButtonText: "NEXT MISSION"
+						});
+				
 			}
 }
 

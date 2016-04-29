@@ -232,7 +232,7 @@ h1 {
 	border-bottom: 3px solid #ffffff;
 }
 
-button.check-answer {
+button.check-answer  {
 	margin-top: 60px;
 	background-color: rgb(0, 34, 62);
 	border: 1.5px solid #ffffff;
@@ -349,6 +349,10 @@ button.check-answer  {
 	display: none;
 }
 
+.alert-correct {
+	border: red solid 2px;
+}
+
 
 
 /*========MAPS PAGE==========*/
@@ -415,7 +419,7 @@ button.check-answer  {
 
 /* Add arrow to close open map or section */
 .map.open, .disc-list.open {
-	background-image: url('../images/chevron.png');
+	background-image: url('../icons/chevron.png');
 	background-repeat: no-repeat;
 	background-position-x: 50%;
 	background-position-y: 90%;
@@ -425,11 +429,19 @@ button.check-answer  {
 /*========MEDIA QUERIES==========*/
 
 @media (max-width: 414px) {
+	/*Wrap menu item text for discover section on mobile*/
 	#seclist h4 {
 		word-wrap: break-word;
 		width: 60%;
 		text-align: left;
 		}
+	/*Fix overlapping text when wrapping on mobile*/
+	.answer-choices ul li label {
+		line-height: 1;
+		}
+	.answer-choices ul li {
+		margin-bottom: 20px;
+	}
 }
 
 @media (min-width: 600px) {
@@ -478,6 +490,7 @@ button.check-answer  {
 	#hmawm img {
 	margin-top: 5px;
 	}
+	
 	
 	
 	/*------MAPS PAGE---------*/
