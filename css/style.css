@@ -219,12 +219,9 @@ h1 {
 .dispic {
 	max-width: 90%;
 	margin: 5%;
+	border: 3px solid #fff
 }
 	
-#aircrafthall img {
-	border: 3px solid #fff;
-}
-
 .discovinfo {
 	background-color: rgb(0, 34, 62);
 	padding: 20px;
