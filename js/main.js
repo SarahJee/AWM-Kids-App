@@ -107,7 +107,7 @@ function getCheckedValue( question, radioName ){
 						 text: answerPara[question],   	
 						 imageUrl: "icons/correct.png", 
 						 customClass: "alert-correct", 
-						 confirmButtonText: "NEXT MISSION"
+						 confirmButtonText: "CHOOSE YOUR NEXT MISSION >"
 						}).then(function() {
 							//add JQuery here. Use dom to find element to hide. Use Q index
 							});
@@ -116,7 +116,7 @@ function getCheckedValue( question, radioName ){
 						 text: answerPara[question],  	
 						 imageUrl: "icons/incorrect.png", 
 						 customClass: "alert-incorrect",
-						 confirmButtonText: "NEXT MISSION"
+						 confirmButtonText: "CHOOSE YOUR NEXT MISSION >"
 						});
 				
 			}
