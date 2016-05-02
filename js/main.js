@@ -110,6 +110,7 @@ function getCheckedValue( question, radioName ){
 						 confirmButtonText: "CHOOSE YOUR NEXT MISSION >"
 						}).then(function() {
 							//add JQuery here. Use dom to find element to hide. Use Q index
+							
 							});
 			} else {
 				swal({   title: "WRONG ANSWER!",   

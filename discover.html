@@ -34,12 +34,13 @@
 <div class="container"> 	
   <!-- DISCOVER HOME PAGE -->
   
-	  
+  
   <div id="discoverpage">
     <div class="navbanner">
       <h6><a href="index.html"><img class="backarrow" src="icons/backarrow.svg" alt="backicon">Discover
 	      <img class="homeicon" src="icons/homeicon.svg" alt="homeicon"></a></h6>
-    </div><!-- End #discoverpage -->
+    </div><!-- End .navbanner -->
+  </div><!-- End #discoverpage -->
 	
 <div id="seclist">
     <div id="discoverinfo" class="disc-list">
@@ -48,12 +49,11 @@
     </div><!-- End #discoverinfo -->
     
     
-	 <!-- AIRCRAFT HALL SECTION -->
-	
-	<div class="ah-blue disc-list closed" data-target="aircrafthall"><h4>Aircraft Hall</h4>
+	 <!-- AIRCRAFT HALL SECTION -->	
+	<div class="ah-blue disc-list closed nav" data-target="aircrafthall"><h4>Aircraft Hall</h4>
 	<img src="icons/planeicon.svg" alt="planeicon"></div> 
 	    
-  <div id="aircrafthall">
+  <div id="aircrafthall" class="open-nav">
       <img class="dispic" src="images/AircraftHall.jpg" alt="Photo of Aircraft">
           
         <div class="discovinfo">
@@ -93,14 +93,14 @@
         </div><!--End .mission-->                 
          
   </div><!-- End #aircrafthall -->
-  
+
   
     <!-- FIRST WORLD WAR SECTION -->
   
-      <div class="fww-green disc-list closed" data-target="firstworldwar"><h4>First World War</h4>
+      <div class="fww-green disc-list closed nav" data-target="firstworldwar"><h4>First World War</h4>
       <img src="icons/helmeticon.svg" alt="helmeticon"></div>
   
-  <div id="firstworldwar">
+  <div id="firstworldwar" class="open-nav">
       <img class="dispic" src="images/FirstWorldWar.jpg" alt="Photo of Canal">
                 
         <div class="discovinfo">
@@ -134,7 +134,6 @@
             </ul>
               
               <button onclick="getCheckedValue(1,'answer2')" class="check-answer">Check Answer</button>
-              <span class="myresults">My results should appear here</span>
               
             </div><!--End .answers-->
         </div><!--End .mission-->         
@@ -144,13 +143,13 @@
 
   <!-- SECOND WORLD WAR SECTION -->
   
-	 <div class="sww-purple disc-list closed" data-target="secondworldwar"><h4>Second World War</h4> 
+	 <div class="sww-purple disc-list closed nav" data-target="secondworldwar"><h4>Second World War</h4> 
 	 <img src="icons/soldiericon.svg" alt="soldiericon"></div>
  
-  <div id="secondworldwar">
+  <div id="secondworldwar" class="open-nav">
       <img class="dispic" src="images/SecondWorldWar.jpg" alt="Photo of Darwin Bombing">
           
-        <div class="discovinfo">
+        <div class="discovinfo" >
            <p>On 3 September 1939 Prime Minister Robert Gordon Menzies announced the beginning of Australia's involvement in the Second World War on every national and commercial radio station in Australia. Almost a million Australians, both men and women, served in the Second World War. They fought in campaigns against Germany and Italy in Europe, the Mediterranean and North Africa, as well as against Japan in south-east Asia and other parts of the Pacific. The Australian mainland came under direct attack for the first time, as Japanese aircraft bombed towns in north-west Australia and Japanese midget submarines attacked Sydney harbour.</p>
         </div><!--End #discovinfo-->
 
@@ -182,7 +181,6 @@
               </ul>
               
               <button onclick="getCheckedValue(2,'answer3')" class="check-answer" >Check Answer</button>
-              <span class="myresults">My results should appear here</span>
               
             </div><!--End .answers-->
         </div><!--End .mission-->
@@ -192,10 +190,10 @@
 
   <!-- HALL OF VALOUR SECTION -->
   
-    <div class="hov-orange disc-list closed" data-target="hallofvalour"><h4>Hall of Valour</h4> 
+    <div class="hov-orange disc-list closed nav" data-target="hallofvalour"><h4>Hall of Valour</h4> 
     <img src="icons/medalicon.svg" alt="medalicon"></div>
     
-  <div id="hallofvalour">
+  <div id="hallofvalour" class="open-nav">
       <img class="dispic" src="images/HallOfValour.jpg" alt="Photo of Hall of Valour">
           
         <div class="discovinfo">
@@ -231,7 +229,6 @@
               </ul>
               
               <button onclick="getCheckedValue(3,'answer4')" class="check-answer" >Check Answer</button>
-              <span class="myresults">My results should appear here</span>
               
             </div><!--End .answers-->
         </div><!--End .mission-->                  
@@ -241,11 +238,11 @@
 
   <!-- ANZAC HALL SECTION -->
   
-    <div class="ah-pink disc-list closed" data-target="anzachall"><h4>Anzac Hall</h4>
+    <div class="ah-pink disc-list closed nav" data-target="anzachall"><h4>Anzac Hall</h4>
     <img src="icons/anzacicon.svg" alt="anzacicon"></div>
       
-  <div id="anzachall">
-      <img class="dispic" src="images/AnzacHall.jpg" alt="Photo of Anzac Hall">
+  <div id="anzachall" class="open-nav">
+      <img class="dispic" src="images/anzachall.jpg" alt="Photo of Anzac Hall">
           
         <div class="discovinfo">
            <p>Anzac Hall shows some of the Memorial’s most significant large objects, using sound and light in innovative ways: the objects themselves become screens to tell compelling stories of Australia’s servicemen and women. Discover the Memorial’s famous midget submarine, assembled from sections of two of the three submarines that raided Sydney in 1942.</p>
@@ -280,7 +277,6 @@
               </ul>
               
             <button onclick="getCheckedValue(4,'answer5')" class="check-answer" >Check Answer</button>
-            <span class="myresults">My results should appear here</span>
             
             </div><!--End .answers-->
         </div><!--End .mission-->                  
@@ -290,11 +286,11 @@
   
 
   <!-- HALL OF MEMORY SECTION -->
-  
-    <div class="hom-blue disc-list closed" data-target="hallofmemory"><h4>Hall of Memory</h4>
+ 
+    <div class="hom-blue disc-list closed nav" data-target="hallofmemory"><h4>Hall of Memory</h4>
     <img src="icons/poppyicon.svg" alt="poppyicon"></div>
     
-  <div id="hallofmemory">
+  <div id="hallofmemory" class="open-nav">
       <img class="dispic" src="images/HallOfMemory.jpg" alt="Photo of Windows">
           
         <div class="discovinfo">
@@ -329,7 +325,6 @@
               </ul>
               
               <button onclick="getCheckedValue(5,'answer6')" class="check-answer" >Check Answer</button>
-              <span class="myresults">My results should appear here</span>
               
             </div><!--End .answers-->
         </div><!--End .mission-->                    
@@ -339,10 +334,10 @@
 
   <!-- CONFLICTS 1945 to TODAY SECTION -->
   
-    <div class="con-green disc-list closed" data-target="conflicts45today"><h4>Conflicts 1945-today</h4> 
+    <div class="con-green disc-list closed nav" data-target="conflicts45today"><h4>Conflicts 1945-today</h4> 
     <img src="icons/grenadeicon.svg" alt="grenadeicon"></div>
     
-  <div id="conflicts45today">
+  <div id="conflicts45today" class="open-nav">
       <img class="dispic" src="images/Conflicts45Today.jpg" alt="Photo of Ship">
           
         <div class="discovinfo">
@@ -378,8 +373,7 @@ Which one of these wars did the HMAS Brisbane serve in?</p>
             
               </ul>
               
-            <button onclick="getCheckedValue(6,'answer7')" class="check-answer" >Check Answer</button>
-            <span class="myresults">My results should appear here</span>            
+            <button onclick="getCheckedValue(6,'answer7')" class="check-answer" >Check Answer</button>          
              
             </div><!--End .answers-->
         </div><!--End .mission-->                       
@@ -389,10 +383,10 @@ Which one of these wars did the HMAS Brisbane serve in?</p>
 
   <!-- MEMORIAL GROUNDS SECTION -->
   
-    <div class="sww-purple disc-list closed" data-target="memorialgrounds"><h4>Memorial Grounds</h4> 
+    <div class="sww-purple disc-list closed nav" data-target="memorialgrounds"><h4>Memorial Grounds</h4> 
     <img src="icons/awmicon.svg" alt="awmicon"></div>
       
-  <div id="memorialgrounds">
+  <div id="memorialgrounds" class="open-nav">
       <img class="dispic" src="images/MemorialGrounds.jpg" alt="Photo of Memorial Grounds">
           
         <div class="discovinfo">
@@ -427,7 +421,6 @@ Which one of these wars did the HMAS Brisbane serve in?</p>
               </ul>
               
             <button onclick="getCheckedValue(7,'answer8')" class="check-answer" >Check Answer</button>
-            <span class="myresults">My results should appear here</span>
             
             </div><!--End .answers-->
         </div> <!--End .mission-->             
@@ -438,10 +431,10 @@ Which one of these wars did the HMAS Brisbane serve in?</p>
 
    <!-- SCULPTURE GARDEN SECTION -->
    
-    <div class="sg-orange disc-list closed" data-target="sculpturegarden"><h4>Sculpture Garden</h4>
+    <div class="sg-orange disc-list closed nav" data-target="sculpturegarden"><h4>Sculpture Garden</h4>
     <img src="icons/treeicon.svg" alt="treeicon"></div>
           
-  <div id="sculpturegarden">
+  <div id="sculpturegarden" class="open-nav">
       <img class="dispic" src="images/SculptureGarden.jpg" alt="Photo of Gardens">
           
         <div class="discovinfo">
@@ -488,9 +481,11 @@ Which one of these wars did the HMAS Brisbane serve in?</p>
 
 </div><!-- End seclist -->
 </div><!-- End container -->
-</body>
+
   
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript" src="js/sweetalert2.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 
+</body>
+</html>
