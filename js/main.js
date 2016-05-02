@@ -108,10 +108,15 @@ function getCheckedValue( question, radioName ){
 						 imageUrl: "icons/correct.png", 
 						 customClass: "alert-correct", 
 						 confirmButtonText: "CHOOSE YOUR NEXT MISSION >"
-						}).then(function() {
-							//add JQuery here. Use dom to find element to hide. Use Q index
+						}).then(function(isConfirm) {
 							
+							
+							//add JQuery here. Use dom to find element to hide. Use Q index
+							   $('.section').click(function(event){	
+								  $(this).hide();
+								  })
 							});
+
 			} else {
 				swal({   title: "WRONG ANSWER!",   
 						 text: answerPara[question],  	
@@ -121,7 +126,8 @@ function getCheckedValue( question, radioName ){
 						});
 				
 			}
-}
+			}
+
 
 
 
@@ -143,9 +149,9 @@ function getCheckedValue( question, radioName ){
 //  return score; // Store score in 'getScore'
 //}
 
-function returnScore(){
- document.getElementByClass("myResults").innerHTML = "Your score is "+ score() +"/"+ total;
-}
+//function returnScore(){
+// document.getElementByClass("myResults").innerHTML = "Your score is "+ score() +"/"+ total;
+//}
 
 
 

@@ -29,7 +29,9 @@ h5 {
 	text-align: left;
 }
 
-
+.hidden {
+	display: none;
+}
 
 /*========HOME PAGE==========*/
 
