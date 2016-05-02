@@ -52,7 +52,7 @@
     timer: null,
     width: 500,
     padding: 20,
-    background: '#fff'
+    background: '#fff',
   };
 
   /*
@@ -302,7 +302,6 @@
         params.imageWidth         = arguments[0].imageWidth || defaultParams.imageWidth;
         params.imageHeight        = arguments[0].imageHeight || defaultParams.imageHeight;
         params.imageClass         = arguments[0].imageClass || defaultParams.imageClass;
-
         break;
 
       default:

@@ -356,15 +356,21 @@ button.check-answer  {
 	background-image: url('images/modal-background.png');
 }
 
+.sweet-content {
+	color: #575757;
+}
+
 .sweet-alert button {
 	background-color: rgb(0, 34, 62)!important;
 	color: #fff;
 	font-family: "Stardos Stencil";
-	padding-top: 2px;
+	padding-top: 2px!important;
 	border-radius: 2px;
 }
 
-
+.sweet-alert .sweet-image {
+	width: 100px;
+}
 
 
 
