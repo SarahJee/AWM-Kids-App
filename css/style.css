@@ -35,13 +35,18 @@ h5 {
 
 /*========HOME PAGE==========*/
 
+#homepage {
+	background-color: #d8d8d8;
+}
 
 #hmsoldier img {
-	width: 300px;
+	width: 100%;
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
 	padding: 1em;
+	height: 240px;
+	border-bottom: 3px solid #fff;
 }
 
 .homelink {
@@ -221,7 +226,7 @@ h1 {
 .dispic {
 	max-width: 90%;
 	margin: 5%;
-	border: 3px solid #fff
+	border: 3px solid #fff;
 }
 	
 .discovinfo {
@@ -350,14 +355,14 @@ button.check-answer  {
 
 /*========MODALS==========*/
 
-.correctAnswer {
+/*.correctAnswer {
 	display: none;
-}
+}*/
 
-/*add class if we need it?*/
+/*add class if we need it?
 .alert-correct {
 	background-image: url('images/modal-background.png');
-}
+}*/
 
 .sweet-content {
 	color: #575757;
@@ -501,8 +506,9 @@ button.check-answer  {
 	}
 
 	#hmsoldier img {
-		background-color: #d8d8d8;
+		height: 100%;
 		padding: 0;
+		background-color: #d8d8d8;
 	}
 	
 	.homelink img {

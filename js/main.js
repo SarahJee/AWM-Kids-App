@@ -81,7 +81,7 @@ var answers = ["a","a","b","c","b","a","b","a","c"];
 
 //Total # of possible answers
     total = answers.length;
- var score = 0;
+
  var answerPara = [
  		"Wilfred Arthur was later awarded the Distinguished Service Order for his bravery. Soon after, “Polly” was retired from service and ended up at an RAAF school at Flemington racecourse.",
  		"The Middle East campaign began in 1916 with Australian troops taking part in the defence of the Suez Canal and the allied re-conquest of the Sinai Desert.",
@@ -186,7 +186,7 @@ getAnswers();
 hideAnswers();
 
 function reset() {
-	localStorage.removeItem("correctAnswers");
+	localStorage.removeItem("givenAnswers");
 	location.reload();
 }
 
