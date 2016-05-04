@@ -72,7 +72,6 @@ $(".disc-list").click(function(e) {
 });
 
 
-
 // http://codepen.io/robwakeman/pen/zxjGWX
 
 
@@ -188,6 +187,7 @@ hideAnswers();
 function reset() {
 	localStorage.removeItem("givenAnswers");
 	location.reload();
+	var correctAnswers = 0;
 }
 
 
@@ -212,9 +212,15 @@ function results() {
 	return result;
 }
 
+
 function showResult() {
 	var score = results();
-	alert("You scored " + score.correct + " out of " + score.total);
+	
+	$("main").hide();
+	$("#results-page").show();
+	
+	$( ".mission-comp" ).append("You scored " + score.correct + " out of " + score.total);
+	
 }
 
 

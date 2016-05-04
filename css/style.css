@@ -455,6 +455,10 @@ button.check-answer  {
 
 /*======== RESULTS PAGE ==========*/
 
+#results-page {
+	display: none;
+}
+
 footer {
 	background-color: #e8495b;
 	height: 200px;
