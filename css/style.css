@@ -453,7 +453,33 @@ button.check-answer  {
 }
 
 
-/*========MEDIA QUERIES==========*/
+/*======== RESULTS PAGE ==========*/
+
+footer {
+	background-color: #e8495b;
+	height: 200px;
+	border-top: solid 3px #fff;
+}
+
+.mission-comp {
+	background-image: url('../images/modal-background.png');
+	height: 500px;;
+}
+
+.mission-comp h2 {
+	padding-top: 1em;
+}
+
+img.home-icon-footer  {
+	width: 40px;
+	margin: 0 auto;
+	display: block;	
+}
+
+
+
+
+/*======== MEDIA QUERIES ==========*/
 
 @media (max-width: 414px) {
 	/*Wrap menu item text for discover section on mobile*/
