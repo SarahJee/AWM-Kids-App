@@ -103,9 +103,19 @@ function getCheckedValue( question, radioName ){
  	var radios = document.getElementsByName( radioName ); //Find the answer choices for each question
  	var checkedValue;
     for(var y=0; y<radios.length; y++) //Loop through answers to find checked answer
-      if(radios[y].checked) checkedValue = radios[y].value;  // store the checked value ie the chosen answer/input
+    if(radios[y].checked) checkedValue = radios[y].value;  // store the checked value ie the chosen answer/input
 
-// display answer and if correct or not (Use SweetAlert)
+	// Store user input in an object      
+	var scoreObject = {
+		questionNum: question,
+		answer: answers[question],
+		givenAnswer: checkedValue
+	};
+	
+	//Store object in local storage
+	storeAnswers(scoreObject);
+
+	// display answer and if correct or not (Use SweetAlert)
 	if (checkedValue === answers[question]) {
 		swal({  title: "CORRECT!",   
 				text: answerPara[question],   	
@@ -118,13 +128,10 @@ function getCheckedValue( question, radioName ){
 					// Select the correct ID from the sections array 
 					$('#' + sections[question]).hide(); 
 					// now select the matching section tile and remove the open class
-					$("div.section[data-target='"+ sections[question] +"']").removeClass("open").hide();
+					$("div.section[data-target='"+ sections[question] +"']").removeClass("open").addClass("answered").hide();
+					//store question number to current question
+					storeAnswers(question);
 					});
-	
-					//$('.section').click(function(event){	
-					// $(this).hide();
-					//})
-					//});
 
 	} else {
 		swal({  title: "WRONG ANSWER!",   
@@ -137,37 +144,79 @@ function getCheckedValue( question, radioName ){
 					//Remove that section (answered seciton)	
 					// Select the correct ID from the sections array (add the hash before it)
 					$('#' + sections[question]).hide(); 
-					// now select the matching section tile and remove the open class
-					$("div.section[data-target='"+ sections[question] +"']").removeClass("open").hide();
+					// Select matching section tile and remove .open class
+					$("div.section[data-target='"+ sections[question] +"']").removeClass("open").addClass("answered").hide();
 					});
 
 			}
 			}
 
+// Empty global variable to store everything in localStorage
+var scoreObjects = [];
+		
+function storeAnswers( questionNum ) {
+	// Add newly answered question 
+	scoreObjects.push(questionNum);
+	// Store modified array in local storage Convert array back to string
+	currentScore = JSON.stringify(scoreObjects);
+	//Store the converted string
+	localStorage.setItem( "givenAnswers", currentScore);
+}
+
+function getAnswers() {
+	// Get any previosuly correct answers as a string
+	var currentScore = localStorage.getItem( "givenAnswers");
+	if (currentScore === null) {
+		return;
+	}
+	// Convert the string to an array
+	scoreObjects = JSON.parse(currentScore);
+}
+
+function hideAnswers() {
+	// Iterate though array and hide the question number (answered section)
+	for (var i=0; i<scoreObjects.length; i++) {
+		var question = scoreObjects[i];
+		// Select matching section tile and remove .open class
+		$("div.section[data-target='"+ sections[question.questionNum] +"']").removeClass("open").addClass("answered").hide();
+	}
+}
+
+getAnswers();
+hideAnswers();
+
+function reset() {
+	localStorage.removeItem("correctAnswers");
+	location.reload();
+}
 
 
 
+// ========================This section is to display at the very end when all 9 questions have been answered =================
 
+function results() {
+	var correctAnswers = 0;
+	var possibleCorrectAnswers = scoreObjects.length;
+	
+	for (var i=0; i<scoreObjects.length; i++) {
+		var scoreObject = scoreObjects[i];	
+		if (scoreObject.answer == scoreObject.givenAnswer) {
+			correctAnswers++;
+		}
+	}
+		
+	var result = {
+		correct:correctAnswers,
+		total:possibleCorrectAnswers
+	};
+	return result;
+}
 
+function showResult() {
+	var score = results();
+	alert("You scored " + score.correct + " out of " + score.total);
+}
 
-
-
-//========================This section is to display at the very end when all 9 questions have been answered=================//
-
-
-
-
-// return total score 
-//function getScore(){
-//  var score = 0;
-//  for (var i=0; i<total; i++)
-//    if(getCheckedValue("answer"+i)===answers[i]) score += 1; // add one when answer is correct
-//  return score; // Store score in 'getScore'
-//}
-
-//function returnScore(){
-// document.getElementByClass("myResults").innerHTML = "Your score is "+ score() +"/"+ total;
-//}
 
 
 

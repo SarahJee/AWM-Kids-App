@@ -260,6 +260,10 @@ button.check-answer  {
 	padding-top: 5px;
 }
 
+.answered {
+	display: none;
+}
+
 
 /*========RADIO BUTTON STYLES==========*/
 /*http://codepen.io/AngelaVelasquez/pen/Eypnq*/
