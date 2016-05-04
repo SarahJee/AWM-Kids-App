@@ -78,6 +78,7 @@ $(".disc-list").click(function(e) {
 
 //Put answers in an array and store in 'Answers' variable.
 var answers = ["a","a","b","c","b","a","b","a","c"];
+
 //Total # of possible answers
     total = answers.length;
  var score = 0;
@@ -92,6 +93,9 @@ var answers = ["a","a","b","c","b","a","b","a","c"];
  		"Two men, above all others, moulded the Memorial: Charles Bean, Australia's Official Historian of the First World War, and John Treloar, the Director of the Memorial between 1920 and 1952.",
  		"Private John Simpson Kirkpatrick John Simpson Kirkpatrick was born in Britain but later moved to Australia. Simpson became famous for his work as a stretcher-bearer. Using one of the donkeys brought in for carrying water, he transported wounded men day and night from the fighting in Monash Valley to the beach on Anzac Cove."
  		];
+ 		
+//Store the IDs of each section to enable removal of open class and to hide question after answer has been submitted.
+var sections  = ["aircrafthall", "firstworldwar", "secondworldwar", "hallofvalour", "anzachall", "hallofmemory", "conflicts45today", "memorialgrounds", "sculpturegarden"];
     
 
 //Create a function to store the users answer choice input (correct or not)
@@ -102,29 +106,41 @@ function getCheckedValue( question, radioName ){
       if(radios[y].checked) checkedValue = radios[y].value;  // store the checked value ie the chosen answer/input
 
 // display answer and if correct or not (Use SweetAlert)
-			if (checkedValue === answers[question]) {
-				swal({   title: "CORRECT!",   
-						 text: answerPara[question],   	
-						 imageUrl: "icons/correct.png", 
-						 customClass: "alert-correct", 
-						 confirmButtonText: "CHOOSE YOUR NEXT MISSION >"
-						}).then(function(isConfirm) {
+	if (checkedValue === answers[question]) {
+		swal({  title: "CORRECT!",   
+				text: answerPara[question],   	
+				imageUrl: "icons/correct.png", 
+				customClass: "alert-correct", 
+				confirmButtonText: "CHOOSE YOUR NEXT MISSION >"
+				}).then(function(isConfirm) {
 							
-							
-							//add JQuery here. Use dom to find element to hide. Use Q index
-							   $('.section').click(function(event){	
-								  $(this).hide();
-								  })
-							});
+					//Remove that section (answered seciton)		
+					// Select the correct ID from the sections array 
+					$('#' + sections[question]).hide(); 
+					// now select the matching section tile and remove the open class
+					$("div.section[data-target='"+ sections[question] +"']").removeClass("open").hide();
+					});
+	
+					//$('.section').click(function(event){	
+					// $(this).hide();
+					//})
+					//});
 
-			} else {
-				swal({   title: "WRONG ANSWER!",   
-						 text: answerPara[question],  	
-						 imageUrl: "icons/incorrect.png", 
-						 customClass: "alert-incorrect",
-						 confirmButtonText: "CHOOSE YOUR NEXT MISSION >"
-						});
-				
+	} else {
+		swal({  title: "WRONG ANSWER!",   
+				text: answerPara[question],  	
+				imageUrl: "icons/incorrect.png", 
+				customClass: "alert-incorrect",
+				confirmButtonText: "CHOOSE YOUR NEXT MISSION >"
+				}).then(function(isConfirm) {
+					
+					//Remove that section (answered seciton)	
+					// Select the correct ID from the sections array (add the hash before it)
+					$('#' + sections[question]).hide(); 
+					// now select the matching section tile and remove the open class
+					$("div.section[data-target='"+ sections[question] +"']").removeClass("open").hide();
+					});
+
 			}
 			}
 
