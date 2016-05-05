@@ -54,7 +54,7 @@
 	<img src="icons/planeicon.svg" alt="planeicon"></div> 
 	    
   <div id="aircrafthall">
-      <img class="dispic" src="images/AircraftHall.jpg" alt="Photo of Aircraft">
+      <img class="dispic" src="images/aircrafthall.jpg" alt="Photo of Aircraft">
           
         <div class="discovinfo">
            <p>The Aircraft Hall contains the exhibition Air power in the Pacific, 1941–53. You can learn about both the practical side of air power – how aircraft work and are put together – and the stories of how it affected everyday life during the Second World War and the Korean War.</p>
@@ -473,11 +473,17 @@
         </div><!--End .mission-->              
             
         </div> <!--End #sculpturegarden--> 
- 
- <!--Results - to add to modal or new page? -->       
-<button class="results" onclick="showResult();">View Results</button>
 
-<button class="reset" onclick="reset();">Reset</button>
+<!-- REPORT/DISCOVER SECTION -->
+<div id="view-results">
+<h3>Your Mission Report</h3>	
+
+ <!-- To Results Page--->       
+<button class="results check-answer" onclick="showResult();">View</button>
+
+</div>
+ 
+
 
 </div><!-- End seclist -->
 </main>
@@ -485,13 +491,14 @@
 	<div id="results-page">
 		<div class="mission-comp">
 		<h2>Mission Accomplished</h2>
-		<h1></h1>
-		<p></p>
+		<h1 id="score"></h1>
+		<p id="full-score"></p>
 	</div>
 	
 	<footer>
-		<h1>GAME OVER</h1>	
-		
+		<h1>GAME OVER</h1>
+			
+	<!-- Build reset into results page 'home' icon link -->	
 		<div class="reset" onclick="reset();"><a href="index.html"><img class="home-icon-footer" src="icons/homeicon-footer.svg" alt="homeicon"></a>	
 	</footer>
 	

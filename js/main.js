@@ -127,8 +127,6 @@ function getCheckedValue( question, radioName ){
 					$('#' + sections[question]).hide(); 
 					// now select the matching section tile and remove the open class
 					$("div.section[data-target='"+ sections[question] +"']").removeClass("open").addClass("answered").hide();
-					//store question number to current question
-					storeAnswers(question);
 					});
 
 	} else {
@@ -195,8 +193,7 @@ function reset() {
 
 function results() {
 	var correctAnswers = 0;
-	var possibleCorrectAnswers = scoreObjects.length;
-	
+	var possibleCorrectAnswers = scoreObjects.length;	
 	for (var i=0; i<scoreObjects.length; i++) {
 		var scoreObject = scoreObjects[i];	
 		if (scoreObject.answer === scoreObject.givenAnswer) {
@@ -218,8 +215,8 @@ function showResult() {
 	$("main").hide();
 	$("#results-page").show();
 	
-	$( ".mission-comp h1" ).append(score.correct);
-	$( ".mission-comp p" ).append("You scored " + score.correct + " out of " + score.total);
+	$( "#score" ).append(score.correct);
+	$( "#full-score" ).append("You scored " + score.correct + " out of " + score.total);
 	
 	if (score.correct <= 5) {
 		$( ".mission-comp" ).append('<p>Better luck next time!</p>');
@@ -227,6 +224,8 @@ function showResult() {
 		$( ".mission-comp" ).append('<p>Well Done!</p>');
 	}
 }
+
+
 
 
 

@@ -7,12 +7,14 @@
 	padding: 0!important;
 }
 
+
 a {
 	text-decoration: none;
 }
 
 p {
 	font-size: 1.3em;
+	font-family: "Lato";
 }
 
 ul, ol {
@@ -38,6 +40,9 @@ h5 {
 #homepage {
 	background-color: #d8d8d8;
 }
+#hmsoldier {
+	border-bottom: 3px solid #fff;
+}
 
 #hmsoldier img {
 	width: 100%;
@@ -46,7 +51,67 @@ h5 {
 	margin-left: auto;
 	padding: 1em;
 	height: 240px;
-	border-bottom: 3px solid #fff;
+}
+
+/*http://codepen.io/cbracco/pen/qzukg
+Tooltip on Home Page */
+
+#hmsoldier a {
+	position: fixed;
+	right: 30px;
+	top: 220px;
+	color: rgb(0, 70, 128);
+	font-size: 18px;
+	font-family: "Stardos Stencil";
+}
+
+
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 50%;
+  left: -250px;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 300px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.72);
+  color: rgb(0, 70, 128);
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+  font-family: "Lato"; 
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
 }
 
 .homelink {
@@ -269,6 +334,24 @@ button.check-answer  {
 	display: none;
 }
 
+/*========DISCOVER/RESULTS==========*/
+
+#view-results {
+	background-color: rgb(232, 73, 91);
+	height: 200px;
+}
+
+button.results.check-answer {
+	margin: 0 auto;
+	display: block;
+	width: 80%;
+
+}
+
+h3 {
+	padding: 20px;
+}
+
 
 /*========RADIO BUTTON STYLES==========*/
 /*http://codepen.io/AngelaVelasquez/pen/Eypnq*/
@@ -355,14 +438,6 @@ button.check-answer  {
 
 /*========MODALS==========*/
 
-/*.correctAnswer {
-	display: none;
-}*/
-
-/*add class if we need it?
-.alert-correct {
-	background-image: url('images/modal-background.png');
-}*/
 
 .sweet-content {
 	color: #575757;
@@ -568,6 +643,7 @@ img.home-icon-footer  {
 	
 	
 	
+	
 	/*------MAPS PAGE---------*/
 	
 	.navbanner {
@@ -647,12 +723,21 @@ img.home-icon-footer  {
 	border: solid #fff 5px;
 	}	
 	
+	/*------View Report Link---------*/
+	#view-results {
+		width: 300px;
+		height: 300px;
+		border: 5px solid #fff;
+		}
+	
 	
 	/*------RESULTS PAGE---------*/
 	
 	.mission-comp h1 {
 		line-height: 1.5;
 	}
+	
+	
 	
 	
 }
