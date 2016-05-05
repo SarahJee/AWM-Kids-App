@@ -336,7 +336,7 @@ button.check-answer  {
 
 /*========DISCOVER/RESULTS==========*/
 
-#view-results {
+#view-report {
 	background-color: rgb(232, 73, 91);
 	height: 200px;
 }
@@ -724,7 +724,7 @@ img.home-icon-footer  {
 	}	
 	
 	/*------View Report Link---------*/
-	#view-results {
+	#view-report {
 		width: 300px;
 		height: 300px;
 		border: 5px solid #fff;

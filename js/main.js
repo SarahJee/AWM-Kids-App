@@ -5,30 +5,8 @@ $('#mydiv')  // Element with ID "mydiv"
 $('p.first') // P tags with class first.
 $('p[title="Hello"]') // P tags with title "Hello"
 $('p[title^="H"]') // P tags title starting with H
-
-
-
-$('a.doSomething').click(function(){
-	// Do something here!
-	alert('You did something, woo hoo!');
-});
 */
 
-    // Get the homepage div element 
-	//var home = document.getElementById( "homepage" );
-	// Change the display property (none) to hide the intro. 
-    //home.style.display = "none";
-    
-   // $(document).ready(function(){	
-   // $(".page").on("click", function(e) {  
-        
-        
-       // var target = $(this).attr(".homelink");
-       // $(target).slideToggle("fast");
-       // $(".homelink").not(target).hide();
-       // e.preventDefault();
-    //});
-//});
 
 
 // Toggle map images on click. 
@@ -77,8 +55,7 @@ $(".disc-list").click(function(e) {
 
 //Put answers in an array and store in 'Answers' variable.
 var answers = ["a","a","b","c","b","a","b","a","c"];
-//Total # of possible answers
- //   total = answers.length;
+
 
  var answerPara = [
  		"Wilfred Arthur was later awarded the Distinguished Service Order for his bravery. Soon after, “Polly” was retired from service and ended up at an RAAF school at Flemington racecourse.",
@@ -178,8 +155,19 @@ function hideAnswers() {
 	}
 }
 
+//Hide Mission Report until all questions are answered. TO FIX! 
+//$('#view-report').hide();
+
+function showMissionReport() {
+	var scoreObject;
+	if (scoreObject.questionNum === 9) {
+	$('#view-report').show();	
+	}
+}
+
 getAnswers();
 hideAnswers();
+showMissionReport();
 
 // Add reset for Reset button and Results page home icon. 
 function reset() {
