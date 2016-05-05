@@ -77,9 +77,8 @@ $(".disc-list").click(function(e) {
 
 //Put answers in an array and store in 'Answers' variable.
 var answers = ["a","a","b","c","b","a","b","a","c"];
-
 //Total # of possible answers
-    total = answers.length;
+ //   total = answers.length;
 
  var answerPara = [
  		"Wilfred Arthur was later awarded the Distinguished Service Order for his bravery. Soon after, “Polly” was retired from service and ended up at an RAAF school at Flemington racecourse.",
@@ -184,10 +183,10 @@ function hideAnswers() {
 getAnswers();
 hideAnswers();
 
+// Add reset for Reset button and Results page home icon. 
 function reset() {
 	localStorage.removeItem("givenAnswers");
 	location.reload();
-	var correctAnswers = 0;
 }
 
 
@@ -200,7 +199,7 @@ function results() {
 	
 	for (var i=0; i<scoreObjects.length; i++) {
 		var scoreObject = scoreObjects[i];	
-		if (scoreObject.answer == scoreObject.givenAnswer) {
+		if (scoreObject.answer === scoreObject.givenAnswer) {
 			correctAnswers++;
 		}
 	}
@@ -219,8 +218,14 @@ function showResult() {
 	$("main").hide();
 	$("#results-page").show();
 	
-	$( ".mission-comp" ).append("You scored " + score.correct + " out of " + score.total);
+	$( ".mission-comp h1" ).append(score.correct);
+	$( ".mission-comp p" ).append("You scored " + score.correct + " out of " + score.total);
 	
+	if (score.correct <= 5) {
+		$( ".mission-comp" ).append('<p>Better luck next time!</p>');
+	} else {
+		$( ".mission-comp" ).append('<p>Well Done!</p>');
+	}
 }
 
 

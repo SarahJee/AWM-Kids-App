@@ -457,6 +457,7 @@ button.check-answer  {
 
 #results-page {
 	display: none;
+	min-height: 600px;
 }
 
 footer {
@@ -466,12 +467,28 @@ footer {
 }
 
 .mission-comp {
+	height: 400px;
 	background-image: url('../images/modal-background.png');
-	height: 500px;;
+	text-align: center;
 }
 
-.mission-comp h2 {
+.mission-comp h1 {
+	border: solid #fff 3px;
+	border-radius: 100%;
+	height: 70px;
+	width: 70px;
+	background-color: #287bd2;
+	margin: 1em auto;
+	padding-top: 10px;
+	line-height: 1.9;
+}
+
+.mission-comp h2, footer h1 {
 	padding-top: 1em;
+}
+
+.mission-comp p {
+	line-height: 0.3;
 }
 
 img.home-icon-footer  {
@@ -629,6 +646,13 @@ img.home-icon-footer  {
 	#sculpturegarden {
 	border: solid #fff 5px;
 	}	
+	
+	
+	/*------RESULTS PAGE---------*/
+	
+	.mission-comp h1 {
+		line-height: 1.5;
+	}
 	
 	
 }
