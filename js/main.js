@@ -95,7 +95,7 @@ function getCheckedValue( question, radioName ){
 		swal({  title: "FORGET SOMETHING?",   
 			text: "Please choose an answer to proceed.",   	
 			imageUrl: "icons/no-answer.png", 
-			confirmButtonText: "CHOOSE YOUR NEXT MISSION >"
+			confirmButtonText: "OK, GO BACK >"
 			})
 	}
 	
@@ -104,7 +104,7 @@ function getCheckedValue( question, radioName ){
 		swal({  title: "CORRECT!",   
 				text: answerPara[question],   	
 				imageUrl: "icons/correct.png", 
-				confirmButtonText: "CHOOSE YOUR NEXT MISSION >"
+				confirmButtonText: "CHOOSE NEXT MISSION >"
 				}).then(function(isConfirm) {
 							
 					//Remove that section (answered seciton)		
@@ -118,7 +118,7 @@ function getCheckedValue( question, radioName ){
 		swal({  title: "WRONG ANSWER!",   
 				text: answerPara[question],  	
 				imageUrl: "icons/incorrect.png", 
-				confirmButtonText: "CHOOSE YOUR NEXT MISSION >"
+				confirmButtonText: "CHOOSE NEXT MISSION >"
 				}).then(function(isConfirm) {
 					
 					//Remove that section (answered seciton)	
