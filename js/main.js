@@ -87,6 +87,8 @@ function getCheckedValue( question, radioName ){
 		givenAnswer: checkedValue
 	};
 	
+
+	
 	//Store object in local storage
 	storeAnswers(scoreObject);
 
@@ -106,7 +108,7 @@ function getCheckedValue( question, radioName ){
 					$("div.section[data-target='"+ sections[question] +"']").removeClass("open").addClass("answered").hide();
 					});
 
-	} else {
+	} else if 
 		swal({  title: "WRONG ANSWER!",   
 				text: answerPara[question],  	
 				imageUrl: "icons/incorrect.png", 
@@ -121,6 +123,12 @@ function getCheckedValue( question, radioName ){
 					$("div.section[data-target='"+ sections[question] +"']").removeClass("open").addClass("answered").hide();
 					});
 
+			}
+			
+			else {
+				(checkedValue === (!answers[question])) {
+				alert('something');
+	}
 			}
 			}
 
@@ -155,15 +163,16 @@ function hideAnswers() {
 	}
 }
 
+
 //Hide Mission Report until all questions are answered. TO FIX! 
-//$('#view-report').hide();
+$('#view-report').hide();
 
 function showMissionReport() {
-	var scoreObject;
-	if (scoreObject.questionNum === 9) {
-	$('#view-report').show();	
+	if(scoreObjects.length === answers.length){
+	$('#view-report').show();
 	}
 }
+
 
 getAnswers();
 hideAnswers();
