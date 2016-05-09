@@ -87,13 +87,15 @@ function getCheckedValue( question, radioName ){
 		givenAnswer: checkedValue
 	};
 	
-
-	
 	//Store object in local storage
 	storeAnswers(scoreObject);
-
+	
+	if ($("input[type=radio]:checked").length < 0) {
+	alert('sup');
+	}
+	
 	// display answer and if correct or not (Use SweetAlert)
-	if (checkedValue === answers[question]) {
+	else if (checkedValue === answers[question]) {
 		swal({  title: "CORRECT!",   
 				text: answerPara[question],   	
 				imageUrl: "icons/correct.png", 
@@ -108,7 +110,7 @@ function getCheckedValue( question, radioName ){
 					$("div.section[data-target='"+ sections[question] +"']").removeClass("open").addClass("answered").hide();
 					});
 
-	} else if 
+	} else 
 		swal({  title: "WRONG ANSWER!",   
 				text: answerPara[question],  	
 				imageUrl: "icons/incorrect.png", 
@@ -124,13 +126,7 @@ function getCheckedValue( question, radioName ){
 					});
 
 			}
-			
-			else {
-				(checkedValue === (!answers[question])) {
-				alert('something');
-	}
-			}
-			}
+
 
 // Empty global variable to store everything in localStorage
 var scoreObjects = [];
