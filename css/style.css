@@ -517,8 +517,7 @@ h3 {
 .map.open, .disc-list.open {
 	background-image: url('../icons/chevron.png');
 	background-repeat: no-repeat;
-	background-position-x: 50%;
-	background-position-y: 90%;
+	background-position: center bottom;
 }
 
 
