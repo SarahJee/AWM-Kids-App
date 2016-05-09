@@ -77,8 +77,9 @@ var sections  = ["aircrafthall", "firstworldwar", "secondworldwar", "hallofvalou
 function getCheckedValue( question, radioName ){
  	var radios = document.getElementsByName( radioName ); //Find the answer choices for each question
  	var checkedValue;
-    for(var y=0; y<radios.length; y++) //Loop through answers to find checked answer
+    for(var y=0; y<radios.length; y++) {//Loop through answers to find checked answer
     if(radios[y].checked) checkedValue = radios[y].value;  // store the checked value ie the chosen answer/input
+	}
 
 	// Store user input in an object      
 	var scoreObject = {
@@ -88,10 +89,14 @@ function getCheckedValue( question, radioName ){
 	};
 	
 	//Store object in local storage
-	storeAnswers(scoreObject);
-	
-	if ($("input[type=radio]:checked").length < 0) {
-	alert('sup');
+	storeAnswers(scoreObject);	
+	if (!checkedValue) {
+		
+		swal({  title: "FORGET SOMETHING?",   
+			text: "Please choose an answer to proceed.",   	
+			imageUrl: "icons/no-answer.png", 
+			confirmButtonText: "CHOOSE YOUR NEXT MISSION >"
+			})
 	}
 	
 	// display answer and if correct or not (Use SweetAlert)
@@ -99,7 +104,6 @@ function getCheckedValue( question, radioName ){
 		swal({  title: "CORRECT!",   
 				text: answerPara[question],   	
 				imageUrl: "icons/correct.png", 
-				customClass: "alert-correct", 
 				confirmButtonText: "CHOOSE YOUR NEXT MISSION >"
 				}).then(function(isConfirm) {
 							
@@ -114,7 +118,6 @@ function getCheckedValue( question, radioName ){
 		swal({  title: "WRONG ANSWER!",   
 				text: answerPara[question],  	
 				imageUrl: "icons/incorrect.png", 
-				customClass: "alert-incorrect",
 				confirmButtonText: "CHOOSE YOUR NEXT MISSION >"
 				}).then(function(isConfirm) {
 					
@@ -130,7 +133,8 @@ function getCheckedValue( question, radioName ){
 
 // Empty global variable to store everything in localStorage
 var scoreObjects = [];
-		
+	
+	
 function storeAnswers( questionNum ) {
 	// Add newly answered question 
 	scoreObjects.push(questionNum);
@@ -138,6 +142,11 @@ function storeAnswers( questionNum ) {
 	currentScore = JSON.stringify(scoreObjects);
 	//Store the converted string
 	localStorage.setItem( "givenAnswers", currentScore);
+	
+	console.log(scoreObjects.length);
+	if(scoreObjects.length === answers.length){
+	$('#view-report').show();
+	}
 }
 
 function getAnswers() {
@@ -163,16 +172,12 @@ function hideAnswers() {
 //Hide Mission Report until all questions are answered. TO FIX! 
 $('#view-report').hide();
 
-function showMissionReport() {
-	if(scoreObjects.length === answers.length){
-	$('#view-report').show();
-	}
-}
+
 
 
 getAnswers();
 hideAnswers();
-showMissionReport();
+
 
 // Add reset for Reset button and Results page home icon. 
 function reset() {
